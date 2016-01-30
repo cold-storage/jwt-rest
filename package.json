@@ -1,0 +1,28 @@
+{
+  "name": "jwt-rest",
+  "description": "REST service with jwt authentication",
+  "license": "ISC",
+  "version": "0.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "./server.js",
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "dependencies": {
+    "body-parser": "1.14.2",
+    "express": "4.13.3",
+    "jws": "3.1.1",
+    "morgan": "1.6.1"
+  },
+  "devDependencies": {
+    "mocha": "2.3.4"
+  },
+  "jshintConfig": {
+    "node": true,
+    "esversion": 6,
+    "predef": [
+      "describe",
+      "it"
+    ]
+  }
+}
