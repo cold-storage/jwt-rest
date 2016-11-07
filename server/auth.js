@@ -28,7 +28,7 @@ function guard(secret) {
     } catch (err) {}
     let now = Math.floor(Date.now() / 1000);
     console.log(req.user);
-    if (req.user !== null && now < req.user.exp) {
+    if (!!req.user && now < req.user.exp) {
       next();
     } else {
       res.sendStatus(401);

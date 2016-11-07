@@ -29,6 +29,12 @@ app.post('/login', auth.login('topsecret', (reqbody, next) => {
   });
 }));
 
+app.get('/free', (req, res) => {
+  res.json({
+    free: 'lunch'
+  });
+});
+
 app.get('/', auth.guard('topsecret'), (req, res) => {
   res.json(req.user);
 });
